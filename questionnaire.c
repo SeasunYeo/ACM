@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 int ans[1001][11];
+int a[2048]={0};
 int ques[10]={1,1,1,1,1,1,1,1,1,1};
 int t,n,m,k,num=0;
 long f(int n){
@@ -10,8 +11,9 @@ long f(int n){
         return (n%2==0?1:m)*f(n/2)*f(n/2);    
 }
 int check(){
-    int a[2048]={0};
     int nums=0,i,j,x,sum;
+	for(i=0;i<2048;i++)
+		a[i]=0;
     for(i=0;i<n;i++){
             sum=0;
             x=1;
